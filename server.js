@@ -14,9 +14,14 @@ app.get("/",function (req,res) {
   res.render("index",data);
 });
 
-app.get("/1",function (req,res) {
-  res.render("user",data.users[0]);
+app.get("/user/:id",function (req,res) {
+  let id = req.params.id;
+  res.render("user",data.users[id-1]);
 });
+
+// app.get("/1",function (req,res) {
+//   res.render("user",data.users[0]);
+// });
 //res.render("index",data.users[chosenUser]);
 
 app.listen(3000, function () {
