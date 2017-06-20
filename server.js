@@ -14,6 +14,10 @@ app.get("/",function (req,res) {
   res.render("index",data);
 });
 
+app.get("/1",function (req,res) {
+  res.render("user",data.users[0]);
+});
+//res.render("index",data.users[chosenUser]);
 
 app.listen(3000, function () {
   console.log("server running on localhost:3000");

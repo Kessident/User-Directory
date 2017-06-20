@@ -9,13 +9,16 @@
 
     {{#users}}
       <div class="userCard">
+        <a href=""><div>
         {{#avatar}}
-          <img src ="{{avatar}}" alt="{{name}}'s avatar'" class="avatar">
+          <img src ="{{avatar}}" alt="{{name}}'s avatar" class="avatar">
         {{/avatar}}
-        <h4>{{name}}</h4>
+        <h2 class="name">{{name}}</h2>
         {{#job}}<p>{{job}} @ {{company}}</p>{{/job}}
         {{^job}}<p class="unemployed">Available for hire</p>{{/job}}
+      </div></a>
       </div>
+
     {{/users}}
 
   </body>

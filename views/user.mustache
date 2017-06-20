@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{name}}</title>
+    <link rel="stylesheet" href="/css/userSheet.css">
+  </head>
+  <body>
+    <div class="top">
+      <img src="{{avatar}}" alt="{{name}}'s avatar" class="avatar">
+      <div class="contactInfo">
+        <h1>{{name}}</h1>
+
+        <p>
+          {{#address.city}}{{address.city}}, {{/address.city}}{{address.country}} |
+          {{#job}}{{job}} @ {{company}}{{/job}}
+          {{^job}}<span class="unemployed">Available for hire</span>{{/job}}
+          <br>
+          {{email}} | {{phone}}
+        </p>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div class="botLeft">
+        {{#university}}<p>Education</p>{{/university}}
+        <p>Skills</p>
+      </div>
+      <div class="botRight">
+        {{#university}}<p>{{university}}</p>{{/university}}
+        <ul class="skillsList">{{#skills}}<li class="skills">{{.}}</li>{{/skills}}</ul>
+
+      </div>
+    </div>
+  </body>
+</html>
