@@ -1,0 +1,14 @@
+.unemployed{
+  color: red;
+}
+
+body{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.userCard{
+  border: 1px solid lightgrey;
+  flex: 1 0 20%;
+  margin: 30px;
+}
